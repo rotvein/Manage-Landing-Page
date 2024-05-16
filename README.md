@@ -1,4 +1,6 @@
 # Responsive landing page layout
+## Enjoy it deployed
+https://rotvein.github.io/Manage-Landing-Page
 ## Description
 ### Technologies used
 It is a responive layout made with `html`, `css`, `scss` and bundled with `webpack`. 
