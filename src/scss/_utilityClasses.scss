@@ -1,0 +1,185 @@
+@use 'variables';
+
+// text color
+.text-primary-400 {
+	color: variables.$c-primary-400;
+}
+
+.text-accent-400 {
+	color: variables.$c-accent-400;
+}
+.text-accent-100 {
+	color: variables.$c-accent-100;
+}
+
+.text-neutral-100 {
+	color: variables.$c-neutral-100;
+}
+.text-neutral-400 {
+	color: variables.$c-neutral-400;
+}
+.text-neutral-900 {
+	color: variables.$c-neutral-900;
+}
+
+// background-color 
+.bg-primary-400 {
+	background-color: variables.$c-primary-400;
+}
+
+.bg-accent-400 {
+	background-color: variables.$c-accent-400;
+}
+.bg-accent-100 {
+	background-color: variables.$c-accent-100;
+}
+
+.bg-neutral-100 {
+	background-color: variables.$c-neutral-100;
+}
+.bg-neutral-400 {
+	background-color: variables.$c-neutral-400;
+}
+.bg-neutral-900 {
+	background-color: variables.$c-neutral-900;
+}
+
+// font weight
+.fw-regular {
+	font-weight: variables.$fw-regular;
+}
+.fw-semibold {
+	font-weight: variables.$fw-semibold;
+}
+.fw-bold {
+	font-weight: variables.$fw-bold;
+}
+
+// font size
+
+.fs-primary-heading {
+	font-size: variables.$fs-primary-heading;
+	line-height: 1.2;
+}
+
+.fs-secondary-heading {
+	font-size: variables.$fs-secondary-heading;
+	line-height: 1.2;
+}
+
+.fs-body {
+	font-size: variables.$fs-body;
+}
+
+.fs-nav {
+	font-size: variables.$fs-nav;
+}
+
+.fs-300 {
+	font-size: variables.$fs-300;
+}
+
+.fs-400 {
+	font-size: variables.$fs-400;
+}
+.fs-500 {
+	font-size: variables.$fs-500;
+}
+.fs-600 {
+	font-size: variables.$fs-600;
+}
+
+.padding-block-900 {
+	padding-block: variables.$size-900;
+}
+
+.padding-top-900 {
+	padding-block-start: variables.$size-900;
+}
+
+.padding-bottom-450 {
+	padding-block-end: variables.$size-450;
+}
+
+.padding-block-700 {
+	padding-block: variables.$size-700;
+}
+
+.padding-top-700 {
+	padding-block-start: variables.$size-700;
+}
+
+.padding-bottom-600 {
+	padding-block-end: variables.$size-600;
+}
+
+.margin-bottom-700 {
+	margin-block-end: 3rem;
+}
+
+.mx-auto {
+	margin-inline: auto;
+}
+
+.padding-top-500 {
+	padding-block-start: variables.$size-500;
+}
+
+.padding-block-600 {
+	padding-block: variables.$size-600;
+}
+
+.container {
+	$max-width:
+	 1110px;
+	$padding: 2rem;
+
+	width:	min($max-width, 100vw - $padding * 2);
+	margin: 0 auto;
+	//border: 1px red solid;
+}
+
+.even-columns {
+	display: grid;
+	gap: 1rem;
+
+	@media (min-width: 50em) {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+	// > div {
+	// 	border: green 1px solid;
+	// }
+	// >div:first-child {
+	// 	padding-right: 8.25rem;
+	// }
+
+}
+@media (max-width: 50em) {
+	.text-center-sm-only {
+		text-align: center;
+		p {
+			margin-inline: auto;
+		}
+	}
+}
+
+
+:where(.flow :not(:first-child)) {
+	margin-top: var(--flow-spacer, 3em)
+}
+
+.justify-self-end {
+	justify-self: end;
+	
+	&-md {
+		@media (min-width: 50em){
+			justify-self: end;
+		}	
+	}
+}
+
+.vertical-align-center {
+	align-items: center;
+}
+

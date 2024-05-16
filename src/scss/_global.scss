@@ -1,0 +1,50 @@
+@use 'variables';
+@use 'sass:color';
+
+html, 
+body {
+	font-family: "Be Vietnam Pro", sans-serif;
+	font-size: variables.$fs-body;
+	color: variables.$c-primary-400;	
+}
+
+
+html {scroll-behavior: smooth;}
+
+
+li {
+	list-style: none;
+}
+
+.button {
+	border-radius: 100vmax;
+	line-height: 1;
+	padding: 1.25em 2.5em;
+	font-weight: variables.$fw-bold;
+	font-size: variables.$fs-button;
+	color: variables.$c-neutral-100;
+	background-color: variables.$c-accent-400;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: 0 1.125em 1em -1em color.scale(variables.$c-accent-400, $lightness: -5%);
+
+
+	&:hover, &:focus-visible {
+		background-color: color.scale(variables.$c-accent-400, $lightness: 20%);
+	}
+
+	&[data-type="inverted"] {
+		color: variables.$c-accent-400;
+		background-color: variables.$c-neutral-100;
+		
+		&:hover, &:focus-visible {
+			color: color.scale(variables.$c-accent-400, $lightness: 32%);
+		}
+	}
+	&[data-shadow="no-shadow"] {
+		box-shadow: none;
+	}
+	
+}

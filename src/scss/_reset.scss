@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font: inherit;	
+}
+
+html, 
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+
+body {
+	line-height: 1.5;	
+	overflow-y: hidden;
+}
+
+img, 
+svg {
+	display: block;
+	max-width: 100%;
+}
